@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kevin Taylor</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="container" style="background-color:#fafafa;">
+
+    <div class="col-sm-9" style="padding:20px;padding-top:100px;background-color:white;">
+
+        <div id="content" class="col-sm-12">
+        </div>
+
+        <div id="project_image" class="col-sm-12">
+            <div class="col-sm-4">
+                <a id="img_project_1" href="javascript:void(0)"><img class="col-sm-12" src="image/1.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+                <a id="img_project_2" href="javascript:void(0)"><img class="col-sm-12" src="image/2.jpg"></a>
+            </div>
+            <div class="col-sm-4">
+                <a id="img_project_3" href="javascript:void(0)"><img class="col-sm-12" src="image/3.jpg"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3" style="padding:20px;padding-top:100px;">
+        <a href="index.html"><h2 style="margin-top:0px;">Kevin Taylor</h2></a>
+
+        <div class="col-sm-12" style="padding:0px; padding-top:20px;">
+            <div class="col-sm-12">
+                <a id="title_page_1" href="javascript:void(0)">Home Page</a>
+            </div>
+            <div class="col-sm-12">
+                <a id="title_page_2" href="javascript:void(0)">Second Page</a>
+            </div>
+        </div>
+
+        <div class="col-sm-12" style="padding:0px; padding-top:40px;">
+            <div class="col-sm-12">
+                <label>&copy;&nbsp;2017&nbsp;All rights reserved.</label>
+            </div>
+            <div class="col-sm-12">
+                <label>Powered by Carlton.</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#img_project_1").click(function(){
+                $("#content").load("project1.html");
+                $("#project_image").attr("style","border-top:2px solid lightgrey;padding-top:50px;");
+            });
+            $("#img_project_2").click(function(){
+                $("#content").load("project2.html");
+                $("#project_image").attr("style","border-top:2px solid lightgrey;padding-top:50px;");
+            });
+            $("#img_project_3").click(function(){
+                $("#content").load("project3.html");
+                $("#project_image").attr("style","border-top:2px solid lightgrey;padding-top:50px;");
+            });
+            $("#title_page_1").click(function(){
+                $("#content").load("page1.html");
+                //$("project_image").remove();
+                $("#project_image").attr("style", "display:none;");
+            });
+            $("#title_page_2").click(function(){
+                $("#content").load("page2.html");
+                //$("project_image").remove();
+                $("#project_image").attr("style", "display:none;");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

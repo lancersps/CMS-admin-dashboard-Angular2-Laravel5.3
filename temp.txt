@@ -1,0 +1,121 @@
+
+        $header_str = '<div class="col-sm-9" style="padding:20px;padding-top:100px;background-color:white;">
+                    <div id="content_page" class="col-sm-12">';
+        $header_str .= '<div id="page1" class="col-sm-12" style="display:none;">
+                    <h2>Page Title 1 </h2>
+                    <p>Page Description</p>
+                </div>
+                <div id="page2" class="col-sm-12" style="display:none;">
+                    <h2>Page Title 2 </h2>
+                    <p>Page Description</p>
+                </div>';
+        $header_str .= '</div>
+                        <div id="content_project" class="col-sm-12">';
+        $header_str .= '<div id="project1" class="col-sm-12" style="display:none;">
+                        <h2>Project Title 1 </h2>
+                        <p>Project Description</p>
+                        <div class="col-sm-8 col-sm-offset-2" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/1.jpg">
+                        </div>
+                        <div class="col-sm-12" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/2.jpg">
+                        </div>
+                        <div class="col-sm-12" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/3.jpg">
+                        </div>
+                    </div>
+                    <div id="project2" class="col-sm-12" style="display:none;">
+                        <h2>Project Title 2 </h2>
+                        <p>Project Description</p>
+                        <div class="col-sm-8 col-sm-offset-2" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/1.jpg">
+                        </div>
+                        <div class="col-sm-12" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/2.jpg">
+                        </div>
+                        <div class="col-sm-12" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/3.jpg">
+                        </div>
+                    </div>
+                    <div id="project2" class="col-sm-12" style="display:none;">
+                        <h2>Project Title 2 </h2>
+                        <p>Project Description</p>
+                        <div class="col-sm-8 col-sm-offset-2" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/1.jpg">
+                        </div>
+                        <div class="col-sm-12" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/2.jpg">
+                        </div>
+                        <div class="col-sm-12" style="padding-bottom:50px;">
+                            <img class="col-sm-12" src="image/3.jpg">
+                        </div>
+                    </div>';
+        $header_str .= '</div>
+                        <div id="project_image" class="col-sm-12">';
+        $header_str .= '<div class="col-sm-4">
+                            <a id="img_project_1" href="javascript:void(0)"><img class="col-sm-12" src="image/1.jpg"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a id="img_project_2" href="javascript:void(0)"><img class="col-sm-12" src="image/2.jpg"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a id="img_project_3" href="javascript:void(0)"><img class="col-sm-12" src="image/3.jpg"></a>
+                        </div>';
+        $header_str .= '</div>
+                        <div class="col-sm-3" style="padding:20px;padding-top:100px;">';
+        $header_str .= '<a href="index.html"><h2 style="margin-top:0px;">Kevin Taylor</h2></a>
+                        <div class="col-sm-12" style="padding:0px; padding-top:20px;">';
+        $header_str .= '<div class="col-sm-12">
+                            <a id="title_page_1" href="javascript:void(0)">Home Page</a>
+                        </div>
+                        <div class="col-sm-12">
+                            <a id="title_page_2" href="javascript:void(0)">Second Page</a>
+                        </div>';
+        $header_str .= '</div>
+
+                        <div class="col-sm-12" style="padding:0px; padding-top:40px;">
+                            <div class="col-sm-12">
+                                <label>&copy;&nbsp;2017&nbsp;All rights reserved.</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <label>Powered by Carlton.</label>
+                            </div>
+                        </div>
+                    </div>';
+
+        $js_str = '$("#img_project_1").click(function(){
+                        $("#project1").attr("style", "display:block;");
+                        $("#project1").siblings().attr("style", "display:none");
+                        $("#project_image").attr("style","border-top:2px solid lightgrey;padding-top:50px;");
+                        $("#content_page").attr("style", "display:none;");
+                        $("#content_project").attr("style", "display:block;");
+                    });
+                    $("#img_project_2").click(function(){
+                        $("#project2").attr("style", "display:block;");
+                        $("#project2").siblings().attr("style", "display:none");
+                        $("#content_page").attr("style", "display:none;");
+                        $("#content_project").attr("style", "display:block;");
+                        $("#project_image").attr("style","border-top:2px solid lightgrey;padding-top:50px;");
+                    });
+                    $("#img_project_3").click(function(){
+                        $("#project3").attr("style", "display:block;");
+                        $("#project3").siblings().attr("style", "display:none");
+                        $("#content_page").attr("style", "display:none;");
+                        $("#content_project").attr("style", "display:block;");
+                        $("#project_image").attr("style","border-top:2px solid lightgrey;padding-top:50px;");
+                    });
+                    $("#title_page_1").click(function(){
+                        $("#page1").attr("style", "display:block;");
+                        $("#page1").siblings().attr("style", "display:none");
+                        $("#project_image").attr("style", "display:none;");
+                        $("#content_project").attr("style", "display:none;");
+                        $("#content_page").attr("style", "display:block;");
+                    });
+                    $("#title_page_2").click(function(){
+                        $("#page2").attr("style", "display:block;");
+                        $("#page2").siblings().attr("style", "display:none");
+                        $("#project_image").attr("style", "display:none;");
+                        $("#content_project").attr("style", "display:none;");
+                        $("#content_page").attr("style", "display:block;");
+                    });';
+
